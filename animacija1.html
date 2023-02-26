@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animacija</title>
+    <style>
+        @keyframes krugA_animacija {
+            0% {
+                    transform: translate(0, 150px) rotate(360deg);
+                    width: 260px;
+                    height: 260px;
+                }
+            100% {
+                    transform: translate(0, 150px) rotate(0deg);
+                    width: 260px;
+                    height: 260px;
+        }
+    }
+        @keyframes krugB {
+                0% {
+                    transform: scale(0);
+                }
+         }
+         
+         @keyframes krugC {
+                0% {
+                    transform: scale(0);
+                }
+         }
+         #background {
+            background-color: #050210;
+            width: 720px;
+            height: 600px;
+            margin: auto;
+            position: relative;
+        }
+
+        .krugA {
+            border-radius: 100%;
+            width: 260px;
+            height: 260px;
+            background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+            position: relative;
+            margin: auto;
+            animation: krugA_animacija 0.9s 0s infinite
+        }
+
+        .glow {
+            width: 260px;
+            height:260px;
+            border-radius: 100%;
+            filter: blur(30px);
+            background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+
+        }
+
+        .krugB {
+            width: 230px;
+            height: 230px;
+            border-radius: 100%;
+            background-color: black;
+            position: relative;
+            margin: -95px 245px;
+            
+        }
+        
+        .krugB_animacija {
+            width: 230px;
+            height: 230px;
+            border-radius: 100%;
+            background-color:#1c133fad;
+            filter: grayscale(0.3);
+            animation: krugB 1.5s 0s infinite;
+        }
+
+        .krugC_animacija {
+            width: 230px;
+            height: 230px;
+            border-radius: 100%;
+            background-color:#1c133fad;
+            filter: grayscale(0.3);
+            animation: krugC 1.5s 0.5s infinite;
+            margin: -231px auto;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <div id="background">
+        <div class="krugA">
+            <div class="glow"></div>
+        </div>
+    <div class="krugB">
+        <div class="krugB_animacija"></div>
+        <div class="krugC_animacija"></div>
+    </div>
+        
+    </div> 
+</body>
+</html>
